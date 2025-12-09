@@ -1,0 +1,34 @@
+<!-- Шаблон, в который передаются данные страниц при создании финального ХТМЛ-кода сайта  -->
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подставляем в название вкладки и описание значения переменных, если они заданы на страницах. Если нет — используем значения по умолчанию -->
+    <title>{{ pageTitle if pageTitle else 'Р&К' }}</title>
+    <meta name="description" content="{{
+      pageDesc if pageDesc else 'Р&К — передовое рекламное агентство по рекламе всего и даже чуть большего'
+    }}">
+
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+
+
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <!-- Подключаем includes/header.html -->
+    {% include 'header.html' %}
+
+    <!-- Подключаем содержимое block content каждой страницы, использующей этот шаблон  -->
+    <div class="content">
+      {% block content %}{% endblock %}
+    </div>
+
+    <!-- Подключаем includes/footer.html -->
+    {% include 'footer.html' %}
+
+    <script src="/assets/script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!-- Шаблон, в который передаются данные страниц при создании финального ХТМЛ-кода сайта  -->
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подставляем в название вкладки и описание значения переменных, если они заданы на страницах. Если нет — используем значения по умолчанию -->
+    <title>Проекты</title>
+    <meta name="description" content="Р&amp;К помогает создавать продукты: от маленьких штучек до вещей галактического масштаба">
+
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+
+
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <!-- Подключаем includes/header.html -->
+    <!-- Описываем пункты меню как массив в переменной. Внимательнее с запятыми -->
+
+
+<header class="header">
+  <p>Агентство Рогов и Ко.</p>
+
+  <nav class="nav">
+    <!-- Строим разметку по массиву. При этом если адрес пункта меню  совпадает с адресом страницы на сайте, делаем этот пункт неактивным. См. https://www.artlebedev.ru/kovodstvo/sections/75/#12  -->
+    
+      
+        <a href="/">Главная</a>
+      
+    
+      
+        <span>Проекты</span>
+      
+    
+      
+        <a href="/about/">Люди</a>
+      
+    
+  </nav>
+</header>
+
+    <!-- Подключаем содержимое block content каждой страницы, использующей этот шаблон  -->
+    <div class="content">
+      
+  <h1>Проекты</h1>
+  <p>Рекламное сообщество регулярно концентрирует рекламный блок. Имидж, не меняя концепции, изложенной выше, синхронизирует сегмент рынка.</p>
+
+  <div class="projects">
+    
+      <a class="project" href="#">
+        <img class="project__cover" src="/assets/case-rzd.jpg" alt="Реклама новых тарифов РЖД">
+        <p class="project__title">Реклама новых тарифов РЖД</p>
+      </a>
+    
+      <a class="project" href="#">
+        <img class="project__cover" src="/assets/case-sokol.jpg" alt="Реклама для вебстудии «Сокол»">
+        <p class="project__title">Реклама для вебстудии «Сокол»</p>
+      </a>
+    
+      <a class="project" href="#">
+        <img class="project__cover" src="/assets/case-anita.jpg" alt="Продвижение певицы Аниты Колдуньи">
+        <p class="project__title">Продвижение певицы Аниты Колдуньи</p>
+      </a>
+    
+      <a class="project" href="#">
+        <img class="project__cover" src="/assets/case-sokol.jpg" alt="Реклама для вебстудии «Сокол»">
+        <p class="project__title">Реклама для вебстудии «Сокол»</p>
+      </a>
+    
+      <a class="project" href="#">
+        <img class="project__cover" src="/assets/case-sokol.jpg" alt="Реклама для вебстудии «Сокол»">
+        <p class="project__title">Реклама для вебстудии «Сокол»</p>
+      </a>
+    
+  </div>
+
+    </div>
+
+    <!-- Подключаем includes/footer.html -->
+    <footer class="footer">
+  <small>© Рогов и Ко.</small>
+</footer>
+
+    <script src="/assets/script.js" defer></script>
+  </body>
+</html>
